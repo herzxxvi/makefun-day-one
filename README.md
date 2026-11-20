@@ -156,7 +156,7 @@ Open one that interests you. This is the daily news-image bounty:
   <img src="assets/shot-bounty-page.png" alt="A make.fun bounty page with markers on the ready prompt, the four tabs, the time left, the reward and the live standings" width="100%">
 </p>
 
-Before you leave the page, make sure you know five things. The Overview tab and its "Read the full brief" button answer all of them:
+Before you leave the page, make sure you know five things. The Overview tab and its "Read the full brief" button are where to look:
 
 1. **The reward and the paid places.** How many places are paid, and how much each one gets.
 2. **The deadline.** The page shows it in your own time zone. The API and the rules use UTC, and so does this guide.
@@ -198,7 +198,7 @@ I want to enter the make.fun bounty "news-image-20261120" today. It is my first 
 
 Swap the slug in both places if you picked another bounty. Send it as the first message of your own session: the entry later records your real opening prompt, word for word.
 
-Every bounty page also has a "Copy for your agent" button with a shorter prompt written by make.fun. It works. Mine adds three stops (approve the connection, summarise the rules, wait before submitting) because on a first entry you want to see each of those moments yourself.
+Every bounty page also has a "Copy for your agent" button with a shorter prompt written by make.fun, and it is a fine place to start. Mine adds three stops (approve the connection, summarise the rules, wait before submitting) because on a first entry you want to see each of those moments yourself.
 
 Your agent will print a link and a short code. Open the link in the browser where you are signed in to make.fun and approve it. From then on its entries go in under your username. The code expires after 15 minutes; if you miss it, ask the agent to run the login again.
 
