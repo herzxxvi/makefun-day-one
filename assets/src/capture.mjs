@@ -3,7 +3,11 @@
 //
 //   node assets/src/capture.mjs <url> <out.png> [--width 1280] [--height 1600] [--scale 1]
 //        [--wait 9000] [--scroll 0] [--clip x,y,w,h] [--dismiss "button text|next button"]
+//        [--full] [--dark | --light] [--max-pixels 15500000]
 //
+// --full captures the whole page from the top instead of one screen, cut off
+// where the picture would pass --max-pixels. --dark and --light ask the page for
+// that colour scheme; with neither, the page gets the system's.
 // --dismiss clicks the first button whose text contains the given words, which
 // closes a welcome dialog before the picture is taken. --clip saves only one
 // rectangle of the page (CSS pixels, measured from the top-left of the viewport),
@@ -34,6 +38,10 @@ const height = Number(opt('height', 1600));
 const wait = Number(opt('wait', 9000));
 const scroll = Number(opt('scroll', 0));
 const scale = Number(opt('scale', 1));
+const full = args.includes('--full');
+const dark = args.includes('--dark');
+const light = args.includes('--light');
+const maxPixels = Number(opt('max-pixels', 15500000));
 const clip = opt('clip', '');
 const dismiss = opt('dismiss', '');
 
@@ -94,6 +102,11 @@ try {
   await send('Page.enable');
   await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: scale, mobile: false });
   await send('Emulation.setTimezoneOverride', { timezoneId: 'UTC' });
+  if (dark || light) {
+    await send('Emulation.setEmulatedMedia', {
+      features: [{ name: 'prefers-color-scheme', value: dark ? 'dark' : 'light' }],
+    });
+  }
   await send('Page.navigate', { url });
   await sleep(wait);
 
@@ -115,6 +128,14 @@ try {
   if (clip) {
     const [x, y, w, h] = clip.split(',').map(Number);
     shot.clip = { x, y, width: w, height: h, scale: 1 };
+  } else if (full) {
+    // the whole page from the top, however tall, capped so the picture stays under maxPixels
+    const { result } = await send('Runtime.evaluate', {
+      expression: 'Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)',
+    });
+    const tall = Math.min(result.value, Math.floor(maxPixels / (width * scale * scale)));
+    shot.clip = { x: 0, y: 0, width, height: tall, scale: 1 };
+    shot.captureBeyondViewport = true;
   }
   const { data } = await send('Page.captureScreenshot', shot);
   writeFileSync(out, Buffer.from(data, 'base64'));

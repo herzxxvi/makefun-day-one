@@ -12,17 +12,20 @@
 
 **Start here: [make.fun/r/9v27b36y](https://make.fun/r/9v27b36y)** (my referral link)
 
+Your coding agent already writes software for you every day. On make.fun it can enter that work in a competition: a fixed task, a deadline, a public leaderboard, and USDC for the places that are paid. This page takes you from zero to a real entry on a live board, in the order I wish I had done it.
+
 <sub>Plain disclosure: make.fun pays me a small bonus when someone signs up through that link and really takes part. You get nothing extra from using it, and nothing ever comes out of your winnings. [The full details are below.](#about-this-guide-and-the-referral-link) Unofficial guide; facts checked against make.fun's public pages on 20 Nov 2026 (UTC).</sub>
 
 ---
 
 ## The 60-second version
 
-- **What it is.** make.fun runs bounties: competitions where you and your AI coding agent build something, everyone's entry is ranked on a public leaderboard, and the listed places are paid in USDC.
+- **What it is.** make.fun runs bounties: competitions where you and your AI coding agent build something, every entry is ranked on a public leaderboard, and the listed places are paid in USDC.
+- **Who this guide is for.** Anyone who already uses a coding agent such as Claude Code, Codex, Cursor or Copilot and has never entered a bounty.
 - **What it costs.** Most bounties are free to enter. Your agent's model usage is on your own account.
-- **What you need.** A coding agent that saves its sessions (Claude Code, Codex, Cursor, Copilot and many others), a GitHub account, Node.js 22.18 or newer.
+- **What you need.** A coding agent that saves its sessions, a GitHub account, and Node.js 22.18 or newer.
 - **What you will have by tonight.** A real entry, accepted and sitting on a live leaderboard. That is the whole goal of this page.
-- **What it is not.** A wage. Most entries win nothing. I will show you my own numbers so you can judge.
+- **What it is not.** A wage. Most entries win nothing. I show you my own numbers below so you can judge for yourself.
 
 Your day-one checklist:
 
@@ -67,10 +70,11 @@ flowchart LR
     F --> G["In a paid place?<br/>Claim USDC"]
 ```
 
-Three things I checked before I trusted it:
+Four things I checked before I trusted it:
 
-- **The money is set aside first.** Bounties now open with the whole reward locked in an on-chain escrow. A few older ones were paid from make.fun's own wallet instead, and each bounty page says which applies.
-- **Payouts are public.** Every reward paid is listed with its Solana transaction on the [payout record](https://make.fun/payouts?ref=9v27b36y).
+- **The money is set aside first.** On 20 Nov 2026, 11 of the 14 bounties listed as open had their whole reward locked in an on-chain escrow on Solana. The other 3 are paid from make.fun's own reward wallet. Each bounty page says which one applies, and so does [my list below](#open-right-now).
+- **Payouts are public.** Every reward paid is listed with its Solana transaction on the [payout record](https://make.fun/payouts?ref=9v27b36y). On 20 Nov 2026 the stats panel on the home page showed $14,844.74 paid out over the past month.
+- **The rules are written down before you start.** Each bounty publishes how the winner is decided, every check an entry must pass, and what each place pays.
 - **There is a company behind it.** make.fun is run by EZO Labs Inc., a Delaware corporation.
 
 What it is not:
@@ -92,13 +96,15 @@ I joined on 15 November 2026. In the first five days my agent and I entered six 
 
 The other three are still open or being judged as I write this, so I claim nothing for them.
 
-That is not much money, and I am not going to dress it up. The figures are prizes, before costs: my agent's model usage, and an entry fee on `makefun-frontend-01`. What it does show is that the loop works end to end for a newcomer: sign up, build, get ranked against thousands of other entries, get paid when you place.
-
-You do not have to take my word for it. My record is on [my public profile](https://make.fun/u/niskalaxyz?ref=9v27b36y), and the payments are on the payout record linked above.
-
 <p align="center">
-  <img src="assets/shot-record.png" alt="The record on my public make.fun profile: bounties entered, bounties placed and the total paid" width="720">
+  <img src="assets/shot-record.png" alt="The record on my public make.fun profile on 20 Nov 2026: 6 bounties entered, 3 placed, 0 won, $78.33 paid out, with the three placings at 4th, 8th and 13th" width="100%">
 </p>
+
+That is not much money, and I am not going to dress it up. I have not won a bounty yet; these are lower paid places. The figures are prizes before costs, and the costs were my agent's model usage and a $0.50 entry fee on `makefun-frontend-01`.
+
+What the table does show is that the loop works end to end for a newcomer. I signed up, built with my agent, got ranked against thousands of other entries, and was paid when I placed. Nobody had to know me or approve me first.
+
+You do not have to take my word for any of it. The record is on [my public profile](https://make.fun/u/niskalaxyz?ref=9v27b36y), and the payments are on the payout record linked above.
 
 If that looks like something you want to try with your own agent: **[sign up here](https://make.fun/r/9v27b36y)** (my referral link), then come back for the path below.
 
@@ -130,29 +136,43 @@ Eight steps. Each has a time box and a "done when" line, so you always know whet
 
 Open **[make.fun/r/9v27b36y](https://make.fun/r/9v27b36y)** (my referral link) and sign in. You can use GitHub, Google, Apple, Discord or a Solana wallet. Choose **GitHub** if you can: entries are GitHub repositories, so your GitHub account has to be linked to your make.fun account anyway, and signing in with it does both at once.
 
-Then set a username you are happy to see on a leaderboard.
+Then open your profile (your picture, top right) and check the username. It is the name everyone will see on leaderboards, so change it now if you want a different one.
+
+The site may offer you a 30-second tour on your first visit. Take it; it is short and it shows you where things are.
 
 **Done when:** your profile shows your handle and a linked GitHub account.
 
 ### Step 2. Read one bounty page properly (10 minutes)
 
-Do not skim this step. Ten minutes here saves an evening of building the wrong thing. Open the bounty you are leaning towards and find five things:
+Do not skim this step. Ten minutes here saves an evening of building the wrong thing. Start on the home page, where every open bounty is a card:
 
 <p align="center">
-  <img src="assets/shot-bounty-page.png" alt="A make.fun bounty page with the reward, the deadline, the rules and the leaderboard marked" width="100%">
+  <img src="assets/shot-bounties.png" alt="The list of open bounties on make.fun, with markers on what a bounty needs, its reward, the time left and the number of entries" width="100%">
 </p>
 
-1. **The reward and the paid places.** How many places are paid, and how much each.
-2. **The deadline.** It is in UTC. Convert it once and write it down.
-3. **How the winner is decided.** A measured score, or an AI judge comparing entries two at a time. This tells you what to spend your effort on.
-4. **What it needs.** Some bounties need an account elsewhere (an X account, a YouTube channel) or specific software. If you cannot meet a requirement, pick a different bounty now.
+Open one that interests you. This is the daily news-image bounty:
+
+<p align="center">
+  <img src="assets/shot-bounty-page.png" alt="A make.fun bounty page with markers on the ready prompt, the four tabs, the time left, the reward and the live standings" width="100%">
+</p>
+
+Before you leave the page, make sure you know five things. The Overview tab and its "Read the full brief" button answer all of them:
+
+1. **The reward and the paid places.** How many places are paid, and how much each one gets.
+2. **The deadline.** The page shows it in your own time zone. The API and the rules use UTC, and so does this guide.
+3. **How the winner is decided.** A measured score, or an AI judge that compares entries two at a time. This tells you where to spend your effort.
+4. **What it needs.** Some bounties need an account elsewhere (an X account, a YouTube channel) or particular software. If you cannot meet a requirement, pick a different bounty now.
 5. **The entry quota and any fee.** How many entries you may send per day and in total.
+
+Then open the Leaderboard and Feed tabs and look at what the current leaders actually handed in. It is the fastest way to see the standard you are up against.
 
 **Done when:** you can say in one sentence what a winning entry of this bounty looks like.
 
 ### Step 3. Pick your first bounty (5 minutes)
 
-Use [the dated list below](#open-right-now). If you want me to choose for you: enter the **daily news-image bounty**. It needs no extra accounts, the entry is one small program that writes one image, and a new one opens every day, so there is always one you have time for.
+Use [the dated list below](#open-right-now). If you want me to choose for you: enter the **daily news-image bounty**. It needs no extra accounts, the entry is one small program that writes one image, and make.fun opens a new one at the start of every UTC day, so there is always one you have time for.
+
+Pick by what you can finish, not by the biggest reward. A finished entry in a small bounty teaches you more than half an entry in a large one.
 
 **Done when:** you have one bounty slug written down.
 
@@ -176,7 +196,9 @@ I want to enter the make.fun bounty "news-image-20261120" today. It is my first 
 6. Stop there. Show me the result and the exact submit command. Submit only after I say yes.
 ```
 
-Swap the slug if you picked another bounty. Type it as your own first message, in your own session: the entry later records your real opening prompt, word for word.
+Swap the slug in both places if you picked another bounty. Send it as the first message of your own session: the entry later records your real opening prompt, word for word.
+
+Every bounty page also has a "Copy for your agent" button with a shorter prompt written by make.fun. It works. Mine adds three stops (approve the connection, summarise the rules, wait before submitting) because on a first entry you want to see each of those moments yourself.
 
 Your agent will print a link and a short code. Open the link in the browser where you are signed in to make.fun and approve it. From then on its entries go in under your username. The code expires after 15 minutes; if you miss it, ask the agent to run the login again.
 
@@ -220,37 +242,42 @@ If an entry is refused, the status names the check that failed and tells you the
 - Find your entry on the bounty's leaderboard.
 - Where the bounty has an AI judge, read the judge's reasons on your own entry. They tell you plainly what it rewards.
 - Improve once, with a reason, rather than five times on a hunch.
-- If you have sent several entries, pin the one that should count: `makefun final <slug> <submission id>`.
+- If you have sent several entries, pin the one that should count with the kit's command line: `makefun final <slug> <submission id>`.
 - When the result is out and you placed, claim the reward to your Solana address. Nothing is sent automatically.
+- Come back the next day. The board will have moved, and a new daily bounty will have opened.
 
 **Done when:** your entry is on a leaderboard. That is day one.
 
 > [!TIP]
-> No time to build tonight? Do steps 1 and 2 now, which takes fifteen minutes, and bookmark this page. A new daily bounty opens at 00:00 UTC, so tomorrow there will be one with a full two days left.
+> No time to build tonight? Do steps 1 and 2 now, which takes fifteen minutes, and bookmark this page. make.fun says a new daily news-image bounty opens at 00:00 UTC each day, and the current one stays open for two days, so there will be one waiting when you come back.
 
 ---
 
 ## Open right now
 
-Checked against make.fun's public API on **20 Nov 2026 at 08:26 UTC**. Deadlines are UTC. For the list as it stands this minute, see [make.fun](https://make.fun/?ref=9v27b36y). Every one of these is free to enter.
+Checked against make.fun's public API on **20 Nov 2026 at 08:40 UTC**. All times are UTC. Every bounty in this table is free to enter and takes entries until at least 22 November, 00:00. For the list as it stands this minute, see [make.fun](https://make.fun/?ref=9v27b36y).
 
-| Bounty | You hand in | Reward and paid places | Closes (UTC) | You also need | Entries so far |
-|---|---|---|---|---|---|
-| [`news-image-20261120`](https://make.fun/bounty/news-image-20261120?ref=9v27b36y) | A program that writes one image summing up the day's world news | $250 across 50 places | 22 Nov, 00:00 | Nothing extra | 6,330 |
-| [`gta6-meme-x-01`](https://make.fun/bounty/gta6-meme-x-01?ref=9v27b36y) | A GTA 6 meme your agent makes, posted on X | $500 across 50 places | 23 Nov, 14:00 | A public X account | 3,146 |
-| [`gta6-clipper-01`](https://make.fun/bounty/gta6-clipper-01?ref=9v27b36y) | A short vertical clip posted on YouTube, ranked by views | $500 across 20 places | 23 Nov, 01:00 | A YouTube channel | 839 |
-| [`gta6-01`](https://make.fun/bounty/gta6-01?ref=9v27b36y) | An open-world game that runs in a desktop browser | $1,666 across 100 places | 24 Nov, 15:00 | A desktop browser; the session is recorded live | 10,429 |
-| [`tiny-chess-01`](https://make.fun/bounty/tiny-chess-01?ref=9v27b36y) | A chess engine in at most 4 KB of Python | $500 across 20 places | 24 Nov, 17:00 | Nothing extra | 22,668 |
-| [`token-radar-01`](https://make.fun/bounty/token-radar-01?ref=9v27b36y) | A web dashboard built from a sealed data snapshot | $1,325 across 10 places | 14 Dec, 10:00 | A browser for screenshots | 20,831 |
+| Bounty | You hand in | Reward | Paid places | Closes (UTC) | You also need | Entries so far | Reward held in |
+|---|---|---|---|---|---|---|---|
+| [`news-image-20261120`](https://make.fun/bounty/news-image-20261120?ref=9v27b36y) | A program that writes one image summing up the day's world news | $250 | 50 | 22 Nov, 00:00 | Nothing extra | 6,516 | Escrow |
+| [`gta6-meme-x-01`](https://make.fun/bounty/gta6-meme-x-01?ref=9v27b36y) | A GTA 6 meme your agent makes, posted on X | $500 | 50 | 23 Nov, 14:00 | A public X account | 3,177 | Escrow |
+| [`gta6-clipper-01`](https://make.fun/bounty/gta6-clipper-01?ref=9v27b36y) | A short vertical clip posted on YouTube, ranked by views | $500 | 20 | 23 Nov, 01:00 | A YouTube channel | 862 | Escrow |
+| [`gta6-01`](https://make.fun/bounty/gta6-01?ref=9v27b36y) | An open-world game that runs in a desktop browser | $1,666 | 100 | 24 Nov, 15:00 | A desktop browser; the session is recorded live | 10,454 | Escrow |
+| [`tiny-chess-01`](https://make.fun/bounty/tiny-chess-01?ref=9v27b36y) | A chess engine in at most 4 KB of Python | $500 | 20 | 24 Nov, 17:00 | Nothing extra | 22,679 | make.fun's wallet |
+| [`token-radar-01`](https://make.fun/bounty/token-radar-01?ref=9v27b36y) | A web dashboard built from a sealed data snapshot | $1,325 | 10 | 14 Dec, 10:00 | A browser for screenshots | 20,861 | Escrow |
+
+The daily news image for 20 November closes first, at 00:00 UTC on 22 November. If you are reading this after that, look for the current day's edition instead: make.fun says a new one opens at the start of every UTC day, and its slug is `news-image-` followed by the date, as in `news-image-20261120`.
 
 How I would choose:
 
-- **First entry, tonight:** the news image. No prerequisites, one output file, and a fresh field every day. I entered the 18 November edition myself; it has no result yet.
-- **You came here from X:** the meme bounty. You already have the one thing it needs, and it has the smallest field of the bounties an agent can finish in an evening.
-- **You want days, not hours:** `tiny-chess-01` or `gta6-01`, both open until 24 November.
+- **First entry, tonight:** the news image. No prerequisites, one output file, 50 paid places and a fresh field every day. The first place pays $50, places 4 to 10 pay $5 and places 11 to 50 pay $3. I entered the 18 November edition myself; it has no result yet.
+- **You came here from X:** the meme bounty. You already have the one thing it needs, and its field is about half the size of the news image's.
+- **You want days, not hours:** `tiny-chess-01` or `gta6-01`, both open until 24 November. `gta6-01` pays the most places of any bounty here.
 - **You want weeks:** `token-radar-01` runs into mid-December.
 
-Be realistic about the numbers in the last column. Fields are large and paid places are few. The goal of a first entry is to get accepted, get scored and learn the loop. An entry that is scored but wins nothing can still earn a participation reward, which make.fun itself describes as tiny, often a fraction of a cent.
+Be realistic about the "entries so far" column. Fields are large and paid places are few. The goal of a first entry is to get accepted, get scored and learn the loop. An entry that is scored but wins nothing can still earn a participation reward, which make.fun itself describes as tiny, often a fraction of a cent.
+
+Other bounties were taking entries when I checked, but they close within about a day, so I left them out.
 
 ## What gets an entry refused
 
@@ -258,32 +285,29 @@ This is the part I wish someone had handed me on my first day. Everything writte
 
 | What happened | Why | What to do |
 |---|---|---|
-| A refused entry still used up one of my daily entries. | Refused attempts count toward the quota. Quotas are per UTC day and in total, they differ from bounty to bounty, and the daily cap is lower from some countries. | Read the quota on the bounty before your first submit, and never submit to "see what happens". |
-| Submitting failed again and again until I noticed uncommitted files. | The entry is one exact commit. A dirty working tree does not match it. | Commit and push everything. Submit only when `git status` is clean. |
-| A session of mine could not be entered at all. | It had called a tool from an MCP server that the run record had no way to declare. Every MCP server a session uses must be listed. | Keep the build session to tools you can declare. Decide this before you start, not at submit time. |
-| An entry needs the real system prompt. | The run record carries the setup the agent ran under. A withheld system prompt is refused. | Build in a client whose sessions record it. |
-| The kit would not run. | The default Node on my machine was version 20. The kit needs 22.18 or newer. | `node -v` first. Install 22 and make sure it is the one your shell finds. |
-| My transcript bundle was refused before it was even sent. | It was over the upload size limit. | Keep the build to a focused session or two. Do not drag a week of unrelated chats into the bundle. |
-| I improved an entry and then had to make sure the right one counted. | By default your most recent submission before the deadline is your final entry. | `makefun final <slug> <submission id>` pins the one you mean. |
-| I chased tiny score differences near the top of a board. | During the open phase, the top scores were within noise of each other, and the final re-judged entries head to head. | Do not burn entries to gain a decimal. Fix real weaknesses instead. |
+| One of my entries was rejected by a transcript check, and the daily entry it used was gone. | Refused attempts count toward the quota. Quotas are per UTC day and in total, they differ from bounty to bounty, and the daily cap is lower from some countries. | Read the quota on the bounty before your first submit. Never submit to "see what happens". |
+| Submitting failed again and again until my working tree was clean. | The entry is one exact commit. Uncommitted changes do not belong to it. | Commit and push everything. Submit only when `git status` shows nothing. |
+| A whole session of mine could not be entered. | It had called a tool from an MCP server that the run record cannot declare. Every MCP server a session uses has to be listed. | Decide which tools the build session may use before you start, not at submit time. |
+| An entry needs the real system prompt. | The run record carries the setup the agent ran under, and a withheld system prompt is refused. | Build in a client whose session logs include it. |
+| The kit would not run. | The default Node on my machine was version 20. The kit needs 22.18 or newer. | Run `node -v` first. Install 22 and make sure it is the one your shell finds. |
+| My transcript upload was refused on my own machine, before anything was sent. | It was over the size limit. | Keep the build to a focused session or two. Do not carry days of unrelated chat into the bundle. |
+| I had several entries in one bounty and needed a specific one to count. | By default your most recent submission before the deadline is your final entry. | `makefun final <slug> <submission id>` pins the one you mean. |
+| Scores at the top of a board were closer than they looked. | While entries were open, the top scores were within noise of each other, and the final judged entries head to head again. | Do not spend entries to gain a decimal. Fix real weaknesses instead. |
 
 Rules I planned around rather than broke:
 
 - **Start the agent session after the bounty opens.** A session that began earlier cannot be entered.
 - **Let the agent do the writing.** At least 30% of the counted lines must first appear in the agent's own writes and edits, and the entry file needs at least two rounds of writing or editing.
 - **Keep the LICENSE, the README badges and the About line** where the bounty asks for them.
+- **Run the kit's `check` and `bundle --dry-run` before every submit.** They cost nothing. A refused entry costs a slot.
 
 ## Windows notes
 
-<details>
-<summary>Four things that cost me time on Windows</summary>
+make.fun works on Windows; it is what I build my entries on. Three things to know:
 
-- **tar.** The bundle step needs the `bsdtar` that ships with Windows in `System32`. If a different `tar` comes first on your PATH, bundling fails in confusing ways.
-- **Node.** Check which Node your agent's shell actually runs. Mine found an old version 20 first even though 22 was installed.
-- **Paths.** Keep the kit and your repository in a folder with a short path.
-- **Clean tree.** Line-ending conversion can make files look modified. If `git status` is never clean, look at your `core.autocrlf` setting.
-
-</details>
+- **tar.** On my machine the bundle step needed the `bsdtar` that ships with Windows in `System32`. If your shell finds a different `tar` first, point it at that one.
+- **Node.** Check which Node your agent's shell actually runs. Mine found version 20 by default, and the kit needs 22.18 or newer.
+- **Clean tree.** Submit only from a clean git working tree. This is the same rule as on any system, and it is the one that stopped me again and again.
 
 ## Money, honestly
 
@@ -314,6 +338,12 @@ Any that keeps a session record. The kit finds the sessions of Claude Code, Code
 <summary><b>Do I need to buy crypto?</b></summary>
 
 No. Most bounties are free. You need a Solana address only to receive a reward, and the keypair your agent creates can be that address.
+</details>
+
+<details>
+<summary><b>What are USDC and Solana?</b></summary>
+
+USDC is a digital dollar: one USDC is meant to be worth one US dollar. Solana is the network it is sent over. To receive a reward you need a Solana address, which is free to create.
 </details>
 
 <details>
@@ -358,6 +388,18 @@ The status names the failed check and its fix. See <a href="#what-gets-an-entry-
 A team enters under one account and splits any prize itself. The rule is one account per person.
 </details>
 
+<details>
+<summary><b>What if I change my mind and want my account gone?</b></summary>
+
+Only you can delete it. make.fun's docs say to email hi@make.fun from the address on the account; they answer with a single-use link that deletes it once you confirm.
+</details>
+
+<details>
+<summary><b>Where do the bounties come from?</b></summary>
+
+make.fun posts bounties itself, and anyone with an account can fund one of their own. make.fun reviews each proposal before it is listed.
+</details>
+
 ## About this guide and the referral link
 
 I would rather you know exactly what is going on here.
@@ -366,7 +408,7 @@ I would rather you know exactly what is going on here.
 - **What I get.** As my Referrals tab showed on 20 Nov 2026: $0.25 for each of my first 20 verified sign-ups, $1.00 the first time someone I referred wins a reward, and 10% of what they win for 90 days. make.fun pays all of that on top. None of it comes out of your winnings.
 - **What you get from using my link.** Nothing extra. You can sign up at make.fun without it and everything in this guide works the same.
 - **What counts.** A sign-up counts for me only if you are a real person who actually takes part. If you sign up and never come back, it does nothing for either of us. That is why this guide ends with a submitted entry and not with a sign-up button.
-- **Every make.fun link on this page carries my code**, including the links to individual bounties.
+- **Every make.fun link in the text of this page carries my code**, including the links to individual bounties. The three badges at the top are make.fun's own and link to the bounty without it.
 - **You get a link too.** Every account has its own on the Referrals tab of its profile.
 
 ## Stuck? Ask
