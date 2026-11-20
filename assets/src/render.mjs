@@ -23,6 +23,7 @@ const assets = resolve(here, '..');
 // name -> source file, output file, CSS size, pixel scale, transparent corners
 const JOBS = {
   'hero':          { src: 'hero.html',          out: 'hero.png',            w: 846,  h: 380, scale: 2, clear: true },
+  'loop':          { src: 'loop.html',          out: 'loop.png',            w: 846,  h: 372, scale: 2, clear: true },
   'day-one':       { src: 'day-one.html',       out: 'day-one.png',         w: 846,  h: 500, scale: 2, clear: true },
   'entry-anatomy': { src: 'entry-anatomy.html', out: 'entry-anatomy.png',   w: 846,  h: 430, scale: 2, clear: true },
   'x-card':        { src: 'x-card.html',        out: 'social/x-card.png',   w: 1200, h: 675, scale: 1, clear: false },

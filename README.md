@@ -59,16 +59,9 @@ A **bounty** on make.fun is a competition with a task, a deadline, a reward and 
 
 The transcripts are the unusual part. They are how the site tells an entry your own agent built from one copied from somewhere else. Automatic checks read them first. Then a sandboxed grader or an AI judge scores every entry the same way, the leaderboard ranks them, and the places the bounty lists are paid in USDC on Solana.
 
-```mermaid
-flowchart LR
-    A["Bounty opens<br/>reward locked in escrow"] --> B["You and your agent<br/>build the entry"]
-    B --> C["Submit<br/>repo commit + transcripts"]
-    C --> D{"Automatic<br/>checks"}
-    D -- "refused: fix and resend" --> B
-    D -- "accepted" --> E["Grader or<br/>AI judge"]
-    E --> F["Leaderboard"]
-    F --> G["In a paid place?<br/>Claim USDC"]
-```
+<p align="center">
+  <img src="assets/loop.png" alt="How a bounty runs, in seven stages: the bounty opens with its reward locked in escrow; you and your agent build the entry; you submit a repo commit plus transcripts; automatic checks either refuse it, so you fix and resend, or accept it; a grader or AI judge scores it; the leaderboard ranks it; and if it is in a paid place you claim USDC" width="100%">
+</p>
 
 Four things I checked before I trusted it:
 

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>make.fun, day one: how a bounty runs</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Seven stages laid out as a snake: four across the top, left to right,
+     then three back along the bottom, right to left. One edge goes backwards:
+     a refused entry returns from the checks to the build. */
+  body { width: 846px; height: 372px; }
+  .frame { position: relative; width: 846px; height: 372px; padding: 24px 28px 0; }
+  h1 { font-size: 25px; font-weight: 600; letter-spacing: -0.02em; margin-top: 4px; }
+
+  .box { position: absolute; width: 175px; height: 88px; padding: 17px 10px 0 14px; border: 1px solid var(--line);
+    border-radius: 12px; background: rgba(18, 26, 46, 0.96); }
+  /* the stage number sits on the box's top-left corner, so the title keeps the full width */
+  .box .n { position: absolute; left: 12px; top: -12px; display: grid; place-items: center; width: 24px; height: 24px;
+    border-radius: 50%; background: var(--amber); color: var(--ink); font-family: var(--mono); font-style: normal;
+    font-weight: 700; font-size: 14px; box-shadow: 0 0 0 3px var(--ink); }
+  .box b { display: block; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+  .box span { display: block; margin-top: 5px; font-size: 13px; line-height: 1.3; color: #c9d2e6; }
+  .box.check { border: 1.5px dashed var(--amber); }
+  .box.win { border-color: rgba(61, 220, 151, 0.6); }
+  .box.win .n { background: var(--green); }
+  .box.win b { color: var(--green); }
+
+  .r1 { top: 132px; } .r2 { top: 266px; }
+  .c0 { left: 28px; } .c1 { left: 233px; } .c2 { left: 438px; } .c3 { left: 643px; }
+
+  svg { position: absolute; left: 0; top: 0; width: 846px; height: 372px; }
+  .edge { fill: none; stroke: var(--amber); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .edge.back { stroke-dasharray: 5 5; }
+  .tag { position: absolute; font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--amber);
+    background: var(--ink); padding: 1px 8px; border-radius: 6px; white-space: nowrap; }
+  .tag.ok { color: var(--green); }
+  .note { position: absolute; left: 28px; top: 272px; width: 178px; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="kicker">make.fun, day one</div>
+  <h1>How a bounty runs</h1>
+
+  <svg viewBox="0 0 846 372" aria-hidden="true">
+    <defs>
+      <marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M1 1 L9 5 L1 9" fill="none" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+    <!-- top row, left to right -->
+    <path class="edge" d="M206 176 H229" marker-end="url(#head)"/>
+    <path class="edge" d="M411 176 H434" marker-end="url(#head)"/>
+    <path class="edge" d="M616 176 H639" marker-end="url(#head)"/>
+    <!-- the back edge: checks to build -->
+    <path class="edge back" d="M730 130 V112 Q730 102 720 102 H330 Q320 102 320 112 V127" marker-end="url(#head)"/>
+    <!-- accepted: down to the bottom row -->
+    <path class="edge" d="M730 223 V262" marker-end="url(#head)"/>
+    <!-- bottom row, right to left -->
+    <path class="edge" d="M640 310 H617" marker-end="url(#head)"/>
+    <path class="edge" d="M435 310 H412" marker-end="url(#head)"/>
+  </svg>
+
+  <div class="tag" style="left: 432px; top: 92px;">refused: fix and resend</div>
+  <div class="tag ok" style="left: 650px; top: 233px;">accepted</div>
+
+  <div class="box r1 c0"><i class="n">1</i><b>Bounty opens</b><span>reward locked in escrow</span></div>
+  <div class="box r1 c1"><i class="n">2</i><b>You and your agent</b><span>build the entry</span></div>
+  <div class="box r1 c2"><i class="n">3</i><b>Submit</b><span>repo commit + transcripts</span></div>
+  <div class="box r1 c3 check"><i class="n">4</i><b>Automatic checks</b><span>do the transcripts match the code?</span></div>
+
+  <div class="box r2 c3"><i class="n">5</i><b>Grader or AI judge</b><span>scores every entry the same way</span></div>
+  <div class="box r2 c2"><i class="n">6</i><b>Leaderboard</b><span>entries ranked in public</span></div>
+  <div class="box r2 c1 win"><i class="n">7</i><b>In a paid place?</b><span>Claim USDC</span></div>
+
+  <div class="note">A refused entry names its fix. You can send it again while entries are open and you have quota left.</div>
+</div>
+</body>
+</html>
