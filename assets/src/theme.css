@@ -1,0 +1,97 @@
+/* Shared look for every rendered graphic in this guide.
+   Dark panels that carry their own background, so one image works on
+   GitHub's light theme and on its dark theme. */
+
+:root {
+  --ink: #0b1020;
+  --panel: #121a2e;
+  --panel-2: #18223b;
+  --line: #2a3550;
+  --text: #f4f6fb;
+  --muted: #9aa7c2;
+  --amber: #ffb020;
+  --green: #3ddc97;
+  --sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --mono: "Consolas", "Cascadia Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: transparent;
+  font-family: var(--sans);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(255, 176, 32, 0.13), transparent 60%),
+    radial-gradient(700px 380px at -5% 110%, rgba(61, 220, 151, 0.08), transparent 60%),
+    var(--ink);
+}
+
+/* a faint grid, like squared paper on a scoreboard */
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(154, 167, 194, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 167, 194, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.amber {
+  color: var(--amber);
+}
+
+.green {
+  color: var(--green);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(18, 26, 46, 0.85);
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.chip b {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 700;
+}

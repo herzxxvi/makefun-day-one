@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>make.fun, day one: card for posts</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { width: 1200px; height: 675px; background: var(--ink); }
+  .frame { width: 1200px; height: 675px; border-radius: 0; border: 0; display: grid; grid-template-columns: 1fr 380px; }
+  .frame::before { background-size: 36px 36px; }
+
+  .left { position: relative; padding: 62px 0 0 70px; }
+  .site { font-family: var(--mono); font-size: 38px; font-weight: 700; color: var(--amber); }
+  .big { margin-top: -10px; font-size: 208px; line-height: 1.02; font-weight: 600; letter-spacing: -0.045em; white-space: nowrap; }
+  .big .dot { color: var(--amber); }
+  .promise { margin-top: 10px; font-size: 37px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.22; }
+  .promise u { text-decoration: none; box-shadow: inset 0 -13px 0 rgba(255, 176, 32, 0.32); }
+  .proof { position: absolute; left: 70px; bottom: 96px; display: flex; gap: 12px; }
+  .proof .chip { font-size: 20px; padding: 9px 18px; }
+  .proof .chip b { font-size: 22px; }
+  .foot { position: absolute; left: 70px; bottom: 50px; font-size: 18px; color: var(--muted); }
+
+  .rail { position: relative; padding: 78px 40px 0 0; }
+  .rail::before { content: ""; position: absolute; left: 9px; top: 96px; bottom: 216px; width: 3px;
+    background: linear-gradient(var(--amber), var(--amber) 62%, var(--green)); }
+  .tick { position: relative; padding-left: 42px; height: 92px; }
+  .tick::before { content: ""; position: absolute; left: 0; top: 7px; width: 21px; height: 21px; border-radius: 50%;
+    background: var(--ink); border: 3px solid var(--amber); }
+  .tick.end::before { border-color: var(--green); background: var(--green); }
+  .tick .t { font-family: var(--mono); font-size: 21px; font-weight: 700; color: var(--amber); }
+  .tick.end .t { color: var(--green); }
+  .tick .l { font-size: 26px; font-weight: 600; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="left">
+    <div class="site">make.fun</div>
+    <div class="big">day one<span class="dot">.</span></div>
+    <div class="promise">Your AI coding agent's first<br>bounty entry, <u>submitted tonight</u>.</div>
+    <div class="proof">
+      <span class="chip"><b>6</b> entered</span>
+      <span class="chip"><b>3</b> placed</span>
+      <span class="chip"><b>$78.33</b> paid</span>
+      <span class="chip">first <b>5</b> days</span>
+    </div>
+    <div class="foot">Unofficial guide by an entrant. Most bounties are free to enter. Referral link disclosed.</div>
+  </div>
+  <div class="rail">
+    <div class="tick"><div class="t">00:00</div><div class="l">Sign up</div></div>
+    <div class="tick"><div class="t">00:15</div><div class="l">Pick a bounty</div></div>
+    <div class="tick"><div class="t">00:20</div><div class="l">Brief your agent</div></div>
+    <div class="tick"><div class="t">02:35</div><div class="l">Submit</div></div>
+    <div class="tick end"><div class="t">NEXT DAY</div><div class="l">On the leaderboard</div></div>
+  </div>
+</div>
+</body>
+</html>

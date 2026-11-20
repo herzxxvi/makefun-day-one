@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>make.fun, day one: annotated screenshots</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* One file, three pictures. render.mjs opens it with ?shot=bounties,
+     ?shot=bounty-page or ?shot=record and only that section is shown.
+     The screenshots in raw/ were captured logged out from public make.fun
+     pages by capture.mjs on 20 Nov 2026 and are shown at 790 px wide. */
+  body { width: 846px; }
+  section { display: none; }
+  section.on { display: block; }
+  .frame { width: 846px; padding: 24px 28px 22px; }
+  h1 { font-size: 25px; font-weight: 600; letter-spacing: -0.02em; margin-top: 4px; }
+  .when { position: absolute; right: 28px; top: 30px; font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: right; line-height: 1.5; }
+
+  .shot { position: relative; width: 790px; margin-top: 16px; border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--line); background: #171b26; }
+  .shot img { display: block; width: 790px; }
+  .shot.fade::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 34px;
+    background: linear-gradient(transparent, #0b1020); }
+
+  /* numbered amber markers */
+  .m { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
+    background: var(--amber); color: var(--ink); font-family: var(--mono); font-size: 15px; font-weight: 700;
+    display: grid; place-items: center; box-shadow: 0 0 0 3px rgba(11, 16, 32, 0.9), 0 0 0 5px rgba(255, 176, 32, 0.35); }
+
+  .legend { display: grid; gap: 8px 18px; margin-top: 14px; }
+  .legend.four { grid-template-columns: repeat(4, 1fr); }
+  .key { display: flex; gap: 9px; align-items: flex-start; font-size: 13px; line-height: 1.35; color: #d5dcec; }
+  .key i { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--amber); color: var(--ink);
+    font-family: var(--mono); font-style: normal; font-weight: 700; font-size: 13px; display: grid; place-items: center; }
+  .key b { display: block; color: var(--text); font-weight: 600; }
+
+  /* the legend of the bounty page sits on top of the page's right-hand column */
+  .side { position: absolute; left: 520px; top: 126px; width: 270px; bottom: 0; padding: 16px 16px 0 18px;
+    background: var(--ink); border-left: 1px solid var(--line); border-top: 1px solid var(--line); border-top-left-radius: 10px; }
+  .side .kicker { font-size: 11px; margin-bottom: 10px; }
+  .side .key { margin-bottom: 9px; font-size: 12.5px; }
+
+  .recordhead { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .stats { width: 392px; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  .cap { margin-top: 12px; font-size: 12.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- 1. the list of open bounties -->
+<section id="bounties">
+  <div class="frame">
+    <div class="kicker">make.fun, day one</div>
+    <h1>The bounty list: what each card tells you</h1>
+    <div class="when">make.fun home page<br>20 Nov 2026, 08:36 UTC</div>
+    <div class="shot fade">
+      <img src="raw/bounties.jpg" alt="">
+      <div class="m" style="left: 724px; top: 73px;">1</div>
+      <div class="m" style="left: 92px; top: 154px;">2</div>
+      <div class="m" style="left: 284px; top: 156px;">3</div>
+      <div class="m" style="left: 464px; top: 183px;">4</div>
+    </div>
+    <div class="legend four">
+      <div class="key"><i>1</i><span><b>What it needs</b>an account or software you must have</span></div>
+      <div class="key"><i>2</i><span><b>The reward</b>the total, shared by the paid places</span></div>
+      <div class="key"><i>3</i><span><b>Time left</b>until entries close</span></div>
+      <div class="key"><i>4</i><span><b>The field</b>how many have entered so far</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. one bounty page -->
+<section id="bounty-page">
+  <div class="frame">
+    <div class="kicker">make.fun, day one</div>
+    <h1>A bounty page: five things to find</h1>
+    <div class="when">the daily news-image bounty<br>20 Nov 2026, 08:37 UTC</div>
+    <div class="shot fade">
+      <img src="raw/bounty-page.jpg" alt="">
+      <div class="m" style="left: 620px; top: 40px;">1</div>
+      <div class="m" style="left: 274px; top: 109px;">2</div>
+      <div class="m" style="left: 162px; top: 158px;">3</div>
+      <div class="m" style="left: 486px; top: 158px;">4</div>
+      <div class="m" style="left: 372px; top: 210px;">5</div>
+      <div class="side">
+        <div class="kicker">where to look</div>
+        <div class="key"><i>1</i><span><b>A ready prompt</b>to copy into your agent</span></div>
+        <div class="key"><i>2</i><span><b>Four tabs</b>the brief, every entry, the leaderboard, the discussion</span></div>
+        <div class="key"><i>3</i><span><b>Time left</b>and the closing time</span></div>
+        <div class="key"><i>4</i><span><b>The reward</b>and the size of the field</span></div>
+        <div class="key"><i>5</i><span><b>Live standings</b>the current top entries and their scores</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. the record on the writer's public profile, cropped to the numbers -->
+<section id="record">
+  <div class="frame">
+    <div class="recordhead">
+      <div>
+        <div class="kicker">make.fun, day one</div>
+        <h1>My record after five days</h1>
+      </div>
+      <img class="stats" src="raw/record-stats.jpg" alt="">
+    </div>
+    <div class="shot fade">
+      <img src="raw/record-wins.jpg" alt="">
+    </div>
+    <div class="cap">From my public profile, make.fun/u/niskalaxyz, captured logged out on 20 Nov 2026 (UTC) and cropped to the record.</div>
+  </div>
+</section>
+
+<script>
+  const wanted = new URLSearchParams(location.search).get('shot') || 'bounties';
+  document.getElementById(wanted).classList.add('on');
+</script>
+</body>
+</html>
