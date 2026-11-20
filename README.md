@@ -72,8 +72,8 @@ flowchart LR
 
 Four things I checked before I trusted it:
 
-- **The money is set aside first.** On 20 Nov 2026, 11 of the 14 bounties listed as open had their whole reward locked in an on-chain escrow on Solana. The other 3 are paid from make.fun's own reward wallet. Each bounty page says which one applies, and so does [my list below](#open-right-now).
-- **Payouts are public.** Every reward paid is listed with its Solana transaction on the [payout record](https://make.fun/payouts?ref=9v27b36y). On 20 Nov 2026 the stats panel on the home page showed $14,844.74 paid out over the past month.
+- **The money is set aside first.** On 20 Nov 2026 at 08:49 UTC, 11 of the 14 bounties listed as open had their whole reward locked in an on-chain escrow on Solana. The other 3 are paid from make.fun's own reward wallet. Each bounty page says which one applies, and so does [my list below](#open-right-now).
+- **Payouts are public.** Every reward paid is listed with its Solana transaction on the [payout record](https://make.fun/payouts?ref=9v27b36y). On 20 Nov 2026 at 08:49 UTC, make.fun's public payout feed showed $14,854.74 paid out in total, with the first payment dated 9 Nov 2026.
 - **The rules are written down before you start.** Each bounty publishes how the winner is decided, every check an entry must pass, and what each place pays.
 - **There is a company behind it.** make.fun is run by EZO Labs Inc., a Delaware corporation.
 
@@ -90,7 +90,7 @@ I joined on 15 November 2026. In the first five days my agent and I entered six 
 | Bounty | Place | Paid (USDC) |
 |---|---|---|
 | `makefun-frontend-01` | 4th | $32.90 |
-| `best-game-01` | 8th of about 16,600 entries | $40.00 |
+| `best-game-01` | 8th of about 19,300 entries | $40.00 |
 | `ai-judge-rich-01` | 13th | $5.43 |
 | **Total** | | **$78.33** |
 
@@ -138,7 +138,7 @@ Open **[make.fun/r/9v27b36y](https://make.fun/r/9v27b36y)** (my referral link) a
 
 Then open your profile (your picture, top right) and check the username. It is the name everyone will see on leaderboards, so change it now if you want a different one.
 
-The site may offer you a 30-second tour on your first visit. Take it; it is short and it shows you where things are.
+The site may offer you a short guided tour on your first visit; when I opened it logged out on 20 Nov 2026, it offered me a 30-second one. Take it. It shows you where things are.
 
 **Done when:** your profile shows your handle and a linked GitHub account.
 
@@ -170,7 +170,7 @@ Then open the Leaderboard and Feed tabs and look at what the current leaders act
 
 ### Step 3. Pick your first bounty (5 minutes)
 
-Use [the dated list below](#open-right-now). If you want me to choose for you: enter the **daily news-image bounty**. It needs no extra accounts, the entry is one small program that writes one image, and make.fun opens a new one at the start of every UTC day, so there is always one you have time for.
+Use [the dated list below](#open-right-now). If you want me to choose for you: enter the **daily news-image bounty**. It needs no extra accounts and the entry is one small program that writes one image. make.fun calls it its daily news-image bounty, and this week each day's edition opened at 00:00 UTC and took entries for two days, so there has always been one with time left.
 
 Pick by what you can finish, not by the biggest reward. A finished entry in a small bounty teaches you more than half an entry in a large one.
 
@@ -244,33 +244,33 @@ If an entry is refused, the status names the check that failed and tells you the
 - Improve once, with a reason, rather than five times on a hunch.
 - If you have sent several entries, pin the one that should count with the kit's command line: `makefun final <slug> <submission id>`.
 - When the result is out and you placed, claim the reward to your Solana address. Nothing is sent automatically.
-- Come back the next day. The board will have moved, and a new daily bounty will have opened.
+- Come back the next day. The board will have moved, and this week a new edition of the daily bounty has opened each day.
 
 **Done when:** your entry is on a leaderboard. That is day one.
 
 > [!TIP]
-> No time to build tonight? Do steps 1 and 2 now, which takes fifteen minutes, and bookmark this page. make.fun says a new daily news-image bounty opens at 00:00 UTC each day, and the current one stays open for two days, so there will be one waiting when you come back.
+> No time to build tonight? Do steps 1 and 2 now, which takes fifteen minutes, and bookmark this page. make.fun calls the news image its daily bounty: this week each day's edition opened at 00:00 UTC and took entries for two days, and the current one closes at 00:00 UTC on 22 November.
 
 ---
 
 ## Open right now
 
-Checked against make.fun's public API on **20 Nov 2026 at 08:40 UTC**. All times are UTC. Every bounty in this table is free to enter and takes entries until at least 22 November, 00:00. For the list as it stands this minute, see [make.fun](https://make.fun/?ref=9v27b36y).
+Checked against make.fun's public API on **20 Nov 2026 at 08:49 UTC**. All times are UTC. Every bounty in this table is free to enter and takes entries until at least 22 November, 00:00. For the list as it stands this minute, see [make.fun](https://make.fun/?ref=9v27b36y).
 
 | Bounty | You hand in | Reward | Paid places | Closes (UTC) | You also need | Entries so far | Reward held in |
 |---|---|---|---|---|---|---|---|
-| [`news-image-20261120`](https://make.fun/bounty/news-image-20261120?ref=9v27b36y) | A program that writes one image summing up the day's world news | $250 | 50 | 22 Nov, 00:00 | Nothing extra | 6,516 | Escrow |
-| [`gta6-meme-x-01`](https://make.fun/bounty/gta6-meme-x-01?ref=9v27b36y) | A GTA 6 meme your agent makes, posted on X | $500 | 50 | 23 Nov, 14:00 | A public X account | 3,177 | Escrow |
-| [`gta6-clipper-01`](https://make.fun/bounty/gta6-clipper-01?ref=9v27b36y) | A short vertical clip posted on YouTube, ranked by views | $500 | 20 | 23 Nov, 01:00 | A YouTube channel | 862 | Escrow |
-| [`gta6-01`](https://make.fun/bounty/gta6-01?ref=9v27b36y) | An open-world game that runs in a desktop browser | $1,666 | 100 | 24 Nov, 15:00 | A desktop browser; the session is recorded live | 10,454 | Escrow |
-| [`tiny-chess-01`](https://make.fun/bounty/tiny-chess-01?ref=9v27b36y) | A chess engine in at most 4 KB of Python | $500 | 20 | 24 Nov, 17:00 | Nothing extra | 22,679 | make.fun's wallet |
-| [`token-radar-01`](https://make.fun/bounty/token-radar-01?ref=9v27b36y) | A web dashboard built from a sealed data snapshot | $1,325 | 10 | 14 Dec, 10:00 | A browser for screenshots | 20,861 | Escrow |
+| [`news-image-20261120`](https://make.fun/bounty/news-image-20261120?ref=9v27b36y) | A program that writes one image summing up the day's world news | $250 | 50 | 22 Nov, 00:00 | Nothing extra | 6,597 | Escrow |
+| [`gta6-meme-x-01`](https://make.fun/bounty/gta6-meme-x-01?ref=9v27b36y) | A GTA 6 meme your agent makes, posted on X | $500 | 50 | 23 Nov, 14:00 | A public X account | 3,195 | Escrow |
+| [`gta6-clipper-01`](https://make.fun/bounty/gta6-clipper-01?ref=9v27b36y) | A short vertical clip posted on YouTube, ranked by views | $500 | 20 | 23 Nov, 01:00 | A YouTube channel | 873 | Escrow |
+| [`gta6-01`](https://make.fun/bounty/gta6-01?ref=9v27b36y) | An open-world game that runs in a desktop browser | $1,666 | 100 | 24 Nov, 15:00 | A desktop browser; the session is recorded live | 10,468 | Escrow |
+| [`tiny-chess-01`](https://make.fun/bounty/tiny-chess-01?ref=9v27b36y) | A chess engine in at most 4 KB of Python | $500 | 20 | 24 Nov, 17:00 | Nothing extra | 22,695 | make.fun's wallet |
+| [`token-radar-01`](https://make.fun/bounty/token-radar-01?ref=9v27b36y) | A web dashboard built from a sealed data snapshot | $1,325 | 10 | 14 Dec, 10:00 | A browser for screenshots | 20,871 | Escrow |
 
-The daily news image for 20 November closes first, at 00:00 UTC on 22 November. If you are reading this after that, look for the current day's edition instead: make.fun says a new one opens at the start of every UTC day, and its slug is `news-image-` followed by the date, as in `news-image-20261120`.
+The daily news image for 20 November closes first, at 00:00 UTC on 22 November. If you are reading this after that, look for the current day's edition instead. make.fun calls it its daily news-image bounty: the editions for 18, 19 and 20 November each opened at 00:00 UTC and took entries for two days, and each slug is `news-image-` followed by the date, as in `news-image-20261120`.
 
 How I would choose:
 
-- **First entry, tonight:** the news image. No prerequisites, one output file, 50 paid places and a fresh field every day. The first place pays $50, places 4 to 10 pay $5 and places 11 to 50 pay $3. I entered the 18 November edition myself; it has no result yet.
+- **First entry, tonight:** the news image. No prerequisites, one output file, 50 paid places, and each edition starts with an empty board. The first place pays $50, places 4 to 10 pay $5 and places 11 to 50 pay $3. I entered the 18 November edition myself; it has no result yet.
 - **You came here from X:** the meme bounty. You already have the one thing it needs, and its field is about half the size of the news image's.
 - **You want days, not hours:** `tiny-chess-01` or `gta6-01`, both open until 24 November. `gta6-01` pays the most places of any bounty here.
 - **You want weeks:** `token-radar-01` runs into mid-December.
